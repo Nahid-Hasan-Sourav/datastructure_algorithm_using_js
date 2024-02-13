@@ -35,7 +35,7 @@ function peek(){
 }
 
 // Testing the pushArray function
-console.log("Testing ");
+console.log("value of peek",peek());
 console.log(pushArray(1));
 console.log(pushArray(2));
 console.log(pushArray(3));
