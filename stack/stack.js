@@ -2,7 +2,7 @@
 const arraySize = 3;
 
 // declare a stack as an array
-const stack = [];
+let stack = [];
 
 // variable to track the top of the stack
 let top = -1;
@@ -18,6 +18,23 @@ function pushArray(item) {
         console.log("Array size is 3 [0, 1, 2]. Cannot push more items.");
     }
 }
+
+//remove or delete an element from stack
+function popArray(){
+    if(top >= 0){
+        let removeTopElemet = stack[top];
+        top = top-1;
+        return removeTopElemet;
+
+    }
+    else{
+        console.log("Array size is greaterThan");
+    }
+}
+
+
+
+
 //if there is any item on stack we will return the value of top element
 function peek(){
    
@@ -26,7 +43,7 @@ function peek(){
         return stack[top-1];
        }
        else{
-        return stack[top];
+        return stack[top-1];
        }
     }
     else{
@@ -41,5 +58,11 @@ console.log(pushArray(2));
 console.log(pushArray(3));
 console.log(pushArray(3));
 console.log("value of peek",peek());
+console.log("START POP HERE ");
+console.log("value of POP",popArray());
+console.log("value of POP",popArray());
+console.log("value of POP",popArray());
+
+console.log("value of STACK",stack);
 
 // console.log(stack);
