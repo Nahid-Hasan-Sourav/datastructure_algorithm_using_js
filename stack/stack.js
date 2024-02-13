@@ -1,8 +1,8 @@
-// define array size
+// define array size for fixed the array
 const arraySize = 3;
 
 // declare a stack as an array
-let stack = [];
+const stack = [];
 
 // variable to track the top of the stack
 let top = -1;
@@ -18,11 +18,28 @@ function pushArray(item) {
         console.log("Array size is 3 [0, 1, 2]. Cannot push more items.");
     }
 }
+//if there is any item on stack we will return the value of top element
+function peek(){
+   
+    if(top>=0){
+       if(top===arraySize){
+        return stack[top-1];
+       }
+       else{
+        return stack[top];
+       }
+    }
+    else{
+        return "There is no elemnt on stack"
+    }
+}
 
 // Testing the pushArray function
 console.log("Testing ");
+console.log(pushArray(1));
+console.log(pushArray(2));
 console.log(pushArray(3));
 console.log(pushArray(3));
-console.log(pushArray(3));
-console.log(pushArray(3));
-console.log(stack);
+console.log("value of peek",peek());
+
+// console.log(stack);
